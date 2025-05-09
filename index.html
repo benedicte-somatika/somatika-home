@@ -4,85 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Somatika – Welcome</title>
-  <!-- Open Graph pour un joli partage -->
+  <!-- Global styles -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Landing-specific styles -->
+  <link rel="stylesheet" href="landing.css">
+  <!-- SEO / Open Graph -->
+  <meta name="description" content="Somatika – Your health companion, rooted in real data and daily insights.">
   <meta property="og:title" content="Somatika – Your Health Companion">
   <meta property="og:description" content="Track your meals & symptoms, get daily insights, offline-ready.">
   <meta property="og:image" content="/img/og-image.png">
   <meta name="theme-color" content="#4cbfa6">
   <link rel="icon" href="/img/favicon.ico">
-  <style>
-    /* === RESET & BASE === */
-    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior: smooth; font-size:16px; }
-    body {
-      display:flex; flex-direction:column; min-height:100vh;
-      font-family:'Inter',sans-serif; background:#f9fbfb; color:#222;
-      animation:fadeIn 0.6s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity:0; transform:translateY(10px) }
-      to   { opacity:1; transform:translateY(0) }
-    }
-    main, section { width:100%; max-width:900px; margin:0 auto; padding:2rem 1rem; }
-    h1,h2,h3 { color:#2d867e; }
-    h1 { font-size:2.5rem; margin-bottom:0.5rem; }
-    p { font-size:1.1rem; margin-bottom:1.5rem; line-height:1.5; }
-
-    /* === HERO === */
-    .hero { text-align:center; padding-top:4rem; }
-    .cta-buttons { display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; margin-top:1.5rem; }
-    .button {
-      display:inline-block; padding:0.8rem 2rem; border-radius:999px;
-      background:#4cbfa6; color:#fff; text-decoration:none; font-weight:600;
-      transition:background 0.3s, transform 0.2s;
-    }
-    .button:hover { background:#3ca895; transform:translateY(-2px); }
-
-    /* === FEATURES GRID === */
-    #features { background:#fff; border-top:1px solid #e0e0e0; }
-    .features-grid {
-      display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-      gap:2rem; margin-top:2rem;
-    }
-    .feature {
-      text-align:center; padding:1.5rem; border:1px solid #e0e0e0;
-      border-radius:0.75rem; transition:transform 0.2s,box-shadow 0.2s;
-      background:#fafafa;
-    }
-    .feature:hover {
-      transform:translateY(-5px);
-      box-shadow:0 8px 16px rgba(0,0,0,0.1);
-    }
-    .feature svg { width:3rem; height:3rem; fill:#4cbfa6; margin-bottom:1rem; }
-
-    /* === CONTACT FORM === */
-    #contact { background:#e0f7f4; }
-    #contact h2 { margin-bottom:1rem; }
-    form { max-width:500px; margin:0 auto; display:flex; flex-direction:column; gap:1rem; }
-    input, textarea {
-      width:100%; padding:0.8rem; border:1px solid #ccc; border-radius:0.5rem;
-      font-family:inherit; font-size:1rem;
-    }
-    textarea { resize:vertical; min-height:120px; }
-    button[type="submit"] {
-      align-self:center; padding:0.8rem 2rem; border:none; border-radius:999px;
-      background:#2d867e; color:#fff; font-weight:600; cursor:pointer;
-      transition:background 0.3s,transform 0.2s;
-    }
-    button[type="submit"]:hover { background:#26c6da; transform:translateY(-2px); }
-
-    /* === FOOTER === */
-    footer {
-      margin-top:auto; padding:1rem; text-align:center; font-size:0.85rem;
-      background:#fff; border-top:1px solid #e0e0e0;
-    }
-
-    /* === RESPONSIVE === */
-    @media (max-width:600px) {
-      h1 { font-size:2rem; }
-      .features-grid { gap:1rem; }
-    }
-  </style>
 </head>
 <body>
 
@@ -100,60 +32,82 @@
   <section id="features">
     <h2>Key Features</h2>
     <div class="features-grid">
-      
       <div class="feature">
-        <!-- Exemple d'icône SVG inline -->
-        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="32" cy="32" r="30" stroke="#4cbfa6" stroke-width="4" fill="none"/>
-          <path d="M20 34l8 8 16-16" stroke="#4cbfa6" stroke-width="4" fill="none"/>
-        </svg>
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="30" stroke="#4cbfa6" stroke-width="4" fill="none"/><path d="M20 34l8 8 16-16" stroke="#4cbfa6" stroke-width="4" fill="none"/></svg>
         <h3>Quick Log</h3>
         <p>Log meals & symptoms in seconds, even offline.</p>
       </div>
-
       <div class="feature">
-        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-          <rect x="12" y="16" width="40" height="32" stroke="#4cbfa6" stroke-width="4" fill="none"/>
-          <path d="M12 32h40" stroke="#4cbfa6" stroke-width="4"/>
-        </svg>
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="16" width="40" height="32" stroke="#4cbfa6" stroke-width="4" fill="none"/><path d="M12 32h40" stroke="#4cbfa6" stroke-width="4"/></svg>
         <h3>Daily Insights</h3>
         <p>Get personalized charts & tips every morning.</p>
       </div>
-
       <div class="feature">
-        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-          <path d="M32,6 L32,58 M6,32 L58,32" stroke="#4cbfa6" stroke-width="4"/>
-        </svg>
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M32,6 L32,58 M6,32 L58,32" stroke="#4cbfa6" stroke-width="4"/></svg>
         <h3>Offline Support</h3>
         <p>Your data syncs when you’re back online.</p>
       </div>
-
       <div class="feature">
-        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-          <path d="M16 24h32v20H16z" stroke="#4cbfa6" stroke-width="4" fill="none"/>
-          <circle cx="32" cy="34" r="4" fill="#4cbfa6"/>
-        </svg>
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M16 24h32v20H16z" stroke="#4cbfa6" stroke-width="4" fill="none"/><circle cx="32" cy="34" r="4" fill="#4cbfa6"/></svg>
         <h3>Secure Data</h3>
         <p>Encrypted & private by design.</p>
       </div>
+    </div>
+  </section>
 
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <h2>About Somatika</h2>
+      <p>Born from a passion for holistic health, Somatika helps you listen to your body through easy meal & symptom logging and daily insights. We believe everyone deserves personalized, data-driven guidance—online or offline.</p>
+      <ul class="about-list">
+        <li>🔍 Data-driven insights to spot patterns</li>
+        <li>📱 Fully offline-capable PWA</li>
+        <li>🔒 Privacy-first encryption</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="container">
+      <h2>What Users Say</h2>
+      <div class="testimonials-grid">
+        <blockquote class="testimonial">
+          <p>“Somatika changed how I track my IBS symptoms. Now I finally see patterns!”</p>
+          <cite>— Alex, 34</cite>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>“Offline logging is a game-changer when I’m in the countryside.”</p>
+          <cite>— Priya, 29</cite>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>“The daily insights keep me motivated and informed every morning.”</p>
+          <cite>— Michael, 42</cite>
+        </blockquote>
+      </div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact">
-    <h2>Contact Us</h2>
-    <form action="mailto:founder@somatika.uk" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your name" required>
-      <input type="email" name="email" placeholder="Your email" required>
-      <textarea name="message" placeholder="How can we help?" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form action="mailto:hello@somatika.uk" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" placeholder="How can we help?" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    © 2025 Somatika • All rights reserved
+    <div class="container">
+      <p>© 2025 Somatika • All rights reserved</p>
+      <p>Built with ❤️ by Benny</p>
+    </div>
   </footer>
 
 </body>
