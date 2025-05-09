@@ -3,79 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Somatika — Your AI health companion, rooted in real data and daily insights." />
-  <title>Welcome to Somatika</title>
-  <link rel="icon" href="/favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Somatika – Welcome</title>
   <style>
-    body {
+    :root {
+      --background: #f9fbfb;
+      --text: #222;
+      --highlight: #4cbfa6;
+      --highlight-hover: #3ca895;
+      --button-text: #fff;
+      --font-family: 'Inter', sans-serif;
+    }
+
+    * {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #f8fdfa;
-      color: #1a1a1a;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: var(--font-family);
+      background: var(--background);
+      color: var(--text);
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
       padding: 2rem;
-    }
-    header {
       text-align: center;
-      margin-top: 4rem;
+      animation: fadeIn 0.8s ease-in;
     }
-    .logo {
-      font-size: 3rem;
-      font-weight: 700;
-      color: #0c9773;
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
-    .tagline {
-      margin-top: 0.5rem;
-      font-size: 1.25rem;
-      color: #444;
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--highlight);
     }
-    .cta {
-      margin-top: 2.5rem;
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
     }
-    .cta a {
+
+    a.button {
       display: inline-block;
-      background-color: #0c9773;
-      color: white;
-      padding: 0.9rem 1.5rem;
+      padding: 0.8rem 2rem;
+      background: var(--highlight);
+      color: var(--button-text);
       border-radius: 999px;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: background-color 0.3s ease;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: background 0.3s ease;
     }
-    .cta a:hover {
-      background-color: #0a7e5f;
+
+    a.button:hover {
+      background: var(--highlight-hover);
     }
+
     footer {
-      margin-top: 6rem;
-      font-size: 0.875rem;
-      color: #777;
-      text-align: center;
+      margin-top: auto;
+      font-size: 0.85rem;
+      color: #888;
     }
+
     @media (max-width: 600px) {
-      .logo {
-        font-size: 2.2rem;
-      }
-      .tagline {
-        font-size: 1rem;
-      }
+      h1 { font-size: 1.75rem; }
+      p  { font-size: 1rem; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">🌿 Welcome to Somatika</div>
-    <div class="tagline">Your health companion, rooted in real data and daily insights.</div>
-    <div class="cta">
-      <a href="https://app.somatika.uk">Access the App →</a>
-    </div>
-  </header>
-
+  <main>
+    <h1>🌱 Welcome to Somatika</h1>
+    <p>Your health companion, rooted in real data and daily insights.</p>
+    <a href="https://app.somatika.uk" class="button">Access the App →</a>
+  </main>
   <footer>
-    &copy; 2025 Somatika • All rights reserved
+    © 2025 Somatika • All rights reserved
   </footer>
 </body>
 </html>
