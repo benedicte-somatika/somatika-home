@@ -2,113 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Somatika – Welcome</title>
-  <!-- Global styles -->
-  <link rel="stylesheet" href="style.css">
-  <!-- Landing-specific styles -->
-  <link rel="stylesheet" href="landing.css">
-  <!-- SEO / Open Graph -->
-  <meta name="description" content="Somatika – Your health companion, rooted in real data and daily insights.">
-  <meta property="og:title" content="Somatika – Your Health Companion">
-  <meta property="og:description" content="Track your meals & symptoms, get daily insights, offline-ready.">
-  <meta property="og:image" content="/img/og-image.png">
-  <meta name="theme-color" content="#4cbfa6">
-  <link rel="icon" href="/img/favicon.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Somatika – Your Health Companion</title>
+  <meta name="description" content="Somatika: track meals & symptoms, get daily insights, offline-ready and privacy-first." />
+  <link rel="canonical" href="https://somatika.uk/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://somatika.uk/" />
+  <meta property="og:title"       content="Somatika – Your Health Companion" />
+  <meta property="og:description" content="Track meals & symptoms, get daily insights, offline-ready and privacy-first." />
+  <meta property="og:image"       content="https://somatika.uk/img/og-image.png" />
+  <meta name="theme-color"        content="#4cbfa6" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/img/favicon.ico" />
+
+  <!-- Preload Inter var font -->
+  <link rel="preload" as="font" href="/fonts/Inter-VariableFont_slnt,wght.ttf" type="font/ttf" crossorigin />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/landing.css" />
 </head>
 <body>
 
+  <!-- NAVIGATION -->
+  <nav aria-label="Main navigation">
+    <ul class="nav-list">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <!-- HERO -->
-  <main class="hero">
+  <main id="hero" class="hero">
     <h1>🌱 Welcome to Somatika</h1>
     <p>Your health companion, rooted in real data and daily insights.</p>
     <div class="cta-buttons">
-      <a href="https://app.somatika.uk" class="button">Access the App →</a>
-      <a href="#features" class="button">See Features ↓</a>
+      <a href="https://app.somatika.uk" class="button" aria-label="Access the Somatika app">Access the App →</a>
+      <a href="#features"          class="button" aria-label="Browse key features">See Features ↓</a>
     </div>
   </main>
 
   <!-- FEATURES -->
-  <section id="features">
+  <section id="features" class="section features">
     <h2>Key Features</h2>
     <div class="features-grid">
-      <div class="feature">
-        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="30" stroke="#4cbfa6" stroke-width="4" fill="none"/><path d="M20 34l8 8 16-16" stroke="#4cbfa6" stroke-width="4" fill="none"/></svg>
-        <h3>Quick Log</h3>
-        <p>Log meals & symptoms in seconds, even offline.</p>
+      <div class="feature" role="region" aria-labelledby="feat1">
+        <svg aria-hidden="true" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" stroke-width="4" fill="none"/><path d="M20 34l8 8 16-16" stroke-width="4" fill="none"/></svg>
+        <h3 id="feat1">Quick Log</h3>
+        <p>Log meals &amp; symptoms in seconds, even offline.</p>
       </div>
-      <div class="feature">
-        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="16" width="40" height="32" stroke="#4cbfa6" stroke-width="4" fill="none"/><path d="M12 32h40" stroke="#4cbfa6" stroke-width="4"/></svg>
-        <h3>Daily Insights</h3>
-        <p>Get personalized charts & tips every morning.</p>
+      <div class="feature" role="region" aria-labelledby="feat2">
+        <svg aria-hidden="true" viewBox="0 0 64 64"><rect x="12" y="16" width="40" height="32" stroke-width="4" fill="none"/><path d="M12 32h40" stroke-width="4"/></svg>
+        <h3 id="feat2">Daily Insights</h3>
+        <p>Get personalized charts &amp; tips every morning.</p>
       </div>
-      <div class="feature">
-        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M32,6 L32,58 M6,32 L58,32" stroke="#4cbfa6" stroke-width="4"/></svg>
-        <h3>Offline Support</h3>
+      <div class="feature" role="region" aria-labelledby="feat3">
+        <svg aria-hidden="true" viewBox="0 0 64 64"><path d="M32,6 L32,58 M6,32 L58,32" stroke-width="4"/></svg>
+        <h3 id="feat3">Offline Support</h3>
         <p>Your data syncs when you’re back online.</p>
       </div>
-      <div class="feature">
-        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M16 24h32v20H16z" stroke="#4cbfa6" stroke-width="4" fill="none"/><circle cx="32" cy="34" r="4" fill="#4cbfa6"/></svg>
-        <h3>Secure Data</h3>
-        <p>Encrypted & private by design.</p>
+      <div class="feature" role="region" aria-labelledby="feat4">
+        <svg aria-hidden="true" viewBox="0 0 64 64"><path d="M16 24h32v20H16z" stroke-width="4" fill="none"/><circle cx="32" cy="34" r="4" fill="#4cbfa6"/></svg>
+        <h3 id="feat4">Secure Data</h3>
+        <p>Encrypted &amp; private by design.</p>
       </div>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about">
-    <div class="container">
-      <h2>About Somatika</h2>
-      <p>Born from a passion for holistic health, Somatika helps you listen to your body through easy meal & symptom logging and daily insights. We believe everyone deserves personalized, data-driven guidance—online or offline.</p>
-      <ul class="about-list">
-        <li>🔍 Data-driven insights to spot patterns</li>
-        <li>📱 Fully offline-capable PWA</li>
-        <li>🔒 Privacy-first encryption</li>
-      </ul>
-    </div>
+  <section id="about" class="section about">
+    <h2>About Somatika</h2>
+    <p>Born from a passion for holistic health, Somatika helps you listen to your body through easy meal &amp; symptom logging and daily insights. We believe everyone deserves personalized, data-driven guidance—online or offline.</p>
+    <ul class="about-list" aria-label="About features">
+      <li>📊 Data-driven insights to spot patterns</li>
+      <li>📱 Fully offline-capable PWA</li>
+      <li>🔒 Privacy-first encryption</li>
+    </ul>
   </section>
 
   <!-- TESTIMONIALS -->
-  <section id="testimonials">
-    <div class="container">
-      <h2>What Users Say</h2>
-      <div class="testimonials-grid">
-        <blockquote class="testimonial">
-          <p>“Somatika changed how I track my IBS symptoms. Now I finally see patterns!”</p>
-          <cite>— Alex, 34</cite>
-        </blockquote>
-        <blockquote class="testimonial">
-          <p>“Offline logging is a game-changer when I’m in the countryside.”</p>
-          <cite>— Priya, 29</cite>
-        </blockquote>
-        <blockquote class="testimonial">
-          <p>“The daily insights keep me motivated and informed every morning.”</p>
-          <cite>— Michael, 42</cite>
-        </blockquote>
-      </div>
-    </div>
+  <section id="testimonials" class="section testimonials">
+    <h2>What Users Say</h2>
+    <blockquote>
+      “Somatika changed how I track my IBS symptoms. Now I finally see patterns!”<br/>
+      <cite>— Alex, 34</cite>
+    </blockquote>
+    <blockquote>
+      “Offline logging is a game-changer when I’m in the countryside.”<br/>
+      <cite>— Priya, 29</cite>
+    </blockquote>
+    <blockquote>
+      “The daily insights keep me motivated and informed every morning.”<br/>
+      <cite>— Michael, 42</cite>
+    </blockquote>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section id="newsletter" class="section newsletter">
+    <h2>Stay Updated</h2>
+    <p>Get release notes &amp; tips delivered to your inbox.</p>
+    <form action="https://somatika.us1.list-manage.com/subscribe/post" method="POST" class="form-newsletter">
+      <label for="email-news">Email address</label>
+      <input type="email" id="email-news" name="EMAIL" placeholder="you@example.com" required>
+      <button type="submit">Subscribe →</button>
+    </form>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <form action="mailto:hello@somatika.uk" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Your email" required>
-        <textarea name="message" placeholder="How can we help?" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
+  <section id="contact" class="section contact">
+    <h2>Contact Us</h2>
+    <form action="mailto:founder@somatika.uk" method="post" enctype="text/plain">
+      <input type="text"    name="name"    placeholder="Your name"  required aria-label="Your name">
+      <input type="email"   name="email"   placeholder="Your email" required aria-label="Your email">
+      <textarea name="message" placeholder="How can we help?" required aria-label="Your message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <div class="container">
-      <p>© 2025 Somatika • All rights reserved</p>
-      <p>Built with ❤️ by Benny</p>
+    <div class="footer-links">
+      <a href="/privacy">Privacy Policy</a> •
+      <a href="/terms">Terms of Service</a> •
+      <a href="/legal">Legal Notice</a>
     </div>
+    <div class="social">
+      <!-- placeholder pour icônes sociales -->
+      <a href="#" aria-label="Twitter"><img src="/img/twitter.svg" alt="" /></a>
+      <a href="#" aria-label="LinkedIn"><img src="/img/linkedin.svg" alt="" /></a>
+    </div>
+    <p>© 2025 Somatika • All rights reserved</p>
   </footer>
+
+  <!-- OPTIONAL: Google Analytics (async) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script> -->
+  <!-- <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-XXXXXXX');</script> -->
 
 </body>
 </html>
